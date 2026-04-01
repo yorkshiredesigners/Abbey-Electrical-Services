@@ -1,0 +1,1705 @@
+/*
+Theme Name: My Blank Theme
+Author: Your Name
+Version: 1.0
+*/
+
+/* =====================================================
+   GLOBAL RESET + FONT
+===================================================== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 900 !important;
+  color: #d71919 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 10px !important;
+}
+
+.white-heading {
+  color: #fff !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.abbey-header-wrapper *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-top-header{
+    background:#fff;
+    padding:30px 20px;
+}
+
+.abbey-header-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.abbey-logo img{
+    max-width:420px;
+    height:auto;
+}
+
+.abbey-logo a{
+    display:inline-block;
+    text-decoration:none;
+}
+
+.abbey-contact{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+}
+
+.abbey-contact-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.abbey-tagline{
+    font-size:21px;
+    font-style:italic;
+    font-weight:700;
+    color:#222;
+    line-height:1.4;
+    text-align:center;
+    width:80%;
+}
+
+.abbey-phone-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.abbey-phone-icon{
+    width:36px;
+    height:36px;
+    fill:#444;
+    flex-shrink:0;
+}
+
+.abbey-phone,
+.abbey-phone a,
+.abbey-phone a:hover,
+.abbey-phone a:visited,
+.abbey-phone a:focus {
+    font-size:56px;
+    font-weight:900;
+    color:#d71919 !important;
+    letter-spacing:1px;
+    text-decoration:none !important;
+    border-bottom:none !important;
+    box-shadow:none !important;
+}
+
+.abbey-email-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+
+.abbey-email-icon{
+    width:28px;
+    height:28px;
+    fill:#555;
+    flex-shrink:0;
+}
+
+.abbey-email{
+    font-size:20px;
+    font-weight:600;
+    color:#d71919;
+}
+
+.abbey-email,
+.abbey-email a,
+.abbey-email a:hover,
+.abbey-email a:visited,
+.abbey-email a:focus {
+    color:#d71919 !important;
+    text-decoration:none !important;
+    border-bottom:none !important;
+    box-shadow:none !important;
+}
+
+.abbey-navbar{
+    background:#d71919 !important;
+}
+
+.abbey-menu-toggle{
+    display:none;
+}
+
+.abbey-nav-container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.abbey-nav-menu{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+.abbey-nav-menu li{
+    margin:0 30px;
+    position:relative;
+}
+
+.abbey-nav-menu li + li::before{
+    content:'';
+    position:absolute;
+    left:-30px;
+    top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:20px;
+    background:rgba(255,255,255,0.5);
+}
+
+.abbey-nav-menu a{
+    display:block;
+    padding:20px 0;
+    color:#fff !important;
+    text-decoration:none !important;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:15px;
+}
+
+.abbey-nav-menu a:hover,
+.abbey-nav-menu a:focus,
+.abbey-nav-menu a:visited {
+    color:#fff !important;
+    text-decoration:none !important;
+    border-bottom:none !important;
+    box-shadow:none !important;
+    outline:none !important;
+}
+
+.abbey-nav-menu li,
+.abbey-nav-menu li a {
+    border-bottom:none !important;
+    text-decoration:none !important;
+    box-shadow:none !important;
+}
+
+@media(max-width:1024px){
+
+    .abbey-top-header{
+        padding:24px 18px 20px;
+    }
+
+    .abbey-email-row{
+        display:none;
+    }
+
+    .abbey-header-inner{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:18px;
+    }
+
+    .abbey-logo img{
+        max-width:260px;
+        width:100%;
+    }
+
+    .abbey-contact{
+        align-items:center;
+        width:100%;
+    }
+
+    .abbey-contact-inner{
+        width:100%;
+        align-items:center;
+        gap:12px;
+    }
+
+    .abbey-tagline{
+        font-size:16px;
+        line-height:1.5;
+        width:100%;
+        max-width:38rem;
+    }
+
+    .abbey-phone-row{
+        justify-content:center;
+        width:100%;
+        gap:10px;
+    }
+
+    .abbey-phone,
+    .abbey-phone a,
+    .abbey-phone a:hover,
+    .abbey-phone a:visited {
+        font-size:32px;
+        line-height:1.1;
+        color:#d71919 !important;
+        text-decoration:none !important;
+        border-bottom:none !important;
+        box-shadow:none !important;
+    }
+
+    .abbey-menu-toggle{
+        display:block !important;
+        background:#d71919 !important;
+        background-color:#d71919 !important;
+        border:none !important;
+        cursor:pointer;
+        padding:16px;
+        width:100%;
+        text-align:center;
+        position:relative;
+        left:0;
+        right:0;
+    }
+
+    .abbey-menu-toggle span{
+        display:block;
+        width:28px;
+        height:3px;
+        background:#fff !important;
+        margin:6px auto;
+        border-radius:2px;
+    }
+
+    .abbey-nav-menu{
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        padding:10px 0;
+        width:100%;
+    }
+
+    .abbey-nav-menu.open{
+        display:flex;
+    }
+
+    .abbey-nav-menu li{
+        margin:0;
+        width:100%;
+        text-align:center;
+    }
+
+    .abbey-nav-menu li + li::before{
+        display:none;
+    }
+
+    .abbey-nav-menu a{
+        padding:14px 0;
+        border-bottom:1px solid rgba(255,255,255,0.2);
+    }
+}
+
+@media(max-width:640px){
+    .abbey-top-header{
+        padding:18px 14px 16px;
+    }
+
+    .abbey-header-inner{
+        gap:14px;
+    }
+
+    .abbey-logo img{
+        max-width:220px;
+    }
+
+    .abbey-contact-inner{
+        gap:10px;
+    }
+
+    .abbey-tagline{
+        font-size:14px;
+        line-height:1.5;
+        max-width:24rem;
+    }
+
+    .abbey-phone-row{
+        gap:8px;
+    }
+
+    .abbey-phone-icon{
+        width:26px;
+        height:26px;
+    }
+
+    .abbey-phone,
+    .abbey-phone a,
+    .abbey-phone a:hover,
+    .abbey-phone a:visited {
+        font-size:26px;
+        letter-spacing:0;
+    }
+
+    .abbey-menu-toggle{
+        padding:14px 12px;
+    }
+
+    .abbey-nav-menu{
+        padding:6px 0;
+    }
+
+    .abbey-nav-menu a{
+        padding:13px 16px;
+        font-size:14px;
+    }
+}
+
+.abbey-hero-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-hero {
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+.abbey-hero img.abbey-hero-img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+.abbey-hero-text {
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:#d71919;
+    padding:20px 30px;
+    max-width:420px;
+}
+.abbey-hero-text h1,
+.abbey-hero-text h2 {
+    color:#fff !important;
+    font-size:25px;
+    font-weight:900;
+    margin-bottom:8px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-hero-text p {
+    color:#fff;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:12px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-contact-btn {
+    display:inline-block;
+    background:#000;
+    color:#fff !important;
+    font-size:14px;
+    font-weight:700;
+    padding:10px 24px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-contact-btn:hover {
+    background:#222;
+}
+@media(max-width:768px){
+    .abbey-hero-text {
+        position:relative;
+        max-width:100%;
+        padding:20px;
+    }
+    .abbey-hero-text h1,
+    .abbey-hero-text h2 {
+        font-size:24px;
+    }
+}
+
+.abbey-services-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+
+.abbey-services-heading {
+    text-align:center;
+    font-size:32px;
+    font-weight:900;
+    color:#d71919;
+    margin-bottom:10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-services-subheading {
+    text-align:center;
+    color:#666;
+    font-size:19px;
+    margin-bottom:50px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-services-grid {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.abbey-service-card {
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+    cursor:pointer;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-service-card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.15);
+}
+
+.abbey-service-img-wrap {
+    position:relative;
+    overflow:hidden;
+    height:180px;
+}
+
+.abbey-service-img-wrap img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.3s ease;
+}
+
+.abbey-service-card:hover .abbey-service-img-wrap img {
+    transform:scale(1.05);
+}
+
+.abbey-service-label {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#d71919;
+    color:#fff;
+    font-size:15px;
+    font-weight:900;
+    padding:10px 16px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-service-body {
+    padding:16px;
+}
+
+.abbey-service-body p {
+    font-size:17px;
+    color:#555;
+    line-height:1.6;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+@media(max-width:900px){
+    .abbey-services-grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:500px){
+    .abbey-services-grid {
+        grid-template-columns:1fr;
+    }
+
+    .abbey-services-heading {
+        font-size:24px;
+    }
+}
+
+.abbey-about-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+
+.abbey-about-inner {
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:60px;
+    align-items:start;
+}
+
+.abbey-about-left h2 {
+    font-size:30px;
+    font-weight:900;
+    color:#d71919;
+    margin-bottom:6px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-about-divider {
+    width:60px;
+    height:4px;
+    background:#d71919;
+    margin:16px 0 24px 0;
+    border-radius:2px;
+}
+
+.abbey-about-left p {
+    font-size:20px;
+    color:#444;
+    line-height:1.8;
+    margin-bottom:18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-about-stats {
+    display:flex;
+    gap:30px;
+    margin-top:30px;
+}
+
+.abbey-stat {
+    text-align:center;
+    background:#d71919;
+    border-radius:8px;
+    padding:20px 24px;
+    flex:1;
+}
+
+.abbey-stat-number {
+    font-size:32px;
+    font-weight:900;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-stat-label {
+    font-size:15px;
+    color:rgba(255,255,255,0.85);
+    margin-top:4px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-callback-form {
+    background:#d71919;
+    border-radius:12px;
+    padding:36px 32px;
+    box-shadow:0 8px 30px rgba(215,25,25,0.3);
+}
+
+.abbey-callback-form h3 {
+    color:#fff !important;
+    font-size:22px;
+    font-weight:900;
+    text-align:center;
+    margin-bottom:6px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-callback-form p.abbey-form-sub {
+    color:rgba(255,255,255,0.8);
+    font-size:13px;
+    text-align:center;
+    margin-bottom:24px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-form-group {
+    margin-bottom:16px;
+}
+
+.abbey-form-group label {
+    display:block;
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:6px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-form-group input {
+    width:100%;
+    padding:12px 14px;
+    border:none;
+    border-radius:6px;
+    font-size:14px;
+    background:#fff;
+    color:#111;
+    box-sizing:border-box;
+    outline:none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-form-group input:focus {
+    box-shadow:0 0 0 3px rgba(255,255,255,0.4);
+}
+
+.abbey-form-submit {
+    width:100%;
+    background:#111;
+    color:#fff;
+    border:none;
+    padding:14px;
+    font-size:15px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:8px;
+    transition:background 0.2s;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-form-submit:hover {
+    background:#333;
+}
+
+@media(max-width:900px){
+    .abbey-about-inner {
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .abbey-about-stats {
+        flex-wrap:wrap;
+    }
+
+    .abbey-stat {
+        flex:1 1 calc(50% - 15px);
+    }
+}
+
+@media(max-width:500px){
+    .abbey-about-left h2 {
+        font-size:22px;
+    }
+
+    .abbey-stat {
+        flex:1 1 100%;
+    }
+}
+
+.abbey-services-list-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+
+.abbey-services-list-inner {
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.abbey-services-list-heading {
+    font-size:32px;
+    font-weight:900;
+    color:#d71919;
+    margin-bottom:10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-services-list-subheading {
+    font-size:18px;
+    color:#666;
+    margin-bottom:40px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-services-list-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.abbey-services-list-col {
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 16px rgba(0,0,0,0.07);
+    padding:30px;
+}
+
+.abbey-services-list-col h3 {
+    font-size:17px;
+    font-weight:900;
+    color:#fff !important;
+    background:#d71919;
+    margin:-30px -30px 20px -30px;
+    padding:16px 24px;
+    border-radius:10px 10px 0 0;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-services-list-col ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.abbey-services-list-col ul li {
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14px;
+    color:#444;
+    padding:8px 0;
+    border-bottom:1px solid #f0f0f0;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.4;
+}
+
+.abbey-services-list-col ul li:last-child {
+    border-bottom:none;
+}
+
+.abbey-services-list-col ul li::before {
+    content:'';
+    display:inline-block;
+    min-width:20px;
+    height:20px;
+    margin-top:1px;
+    border-radius:50%;
+    background-color:#d71919;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 13l4 4L19 7' stroke='%23fff' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size:contain;
+    background-repeat:no-repeat;
+    flex-shrink:0;
+}
+
+@media(max-width:768px){
+    .abbey-services-list-grid {
+        grid-template-columns:1fr;
+    }
+
+    .abbey-services-list-heading {
+        font-size:24px;
+    }
+}
+
+.abbey-callout-banner {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#d71919;
+    padding:50px 40px;
+    box-sizing:border-box;
+    position:relative;
+    overflow:hidden;
+}
+.abbey-callout-banner::before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-image:repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0,0,0,0.03) 10px,
+        rgba(0,0,0,0.03) 20px
+    );
+}
+.abbey-callout-inner {
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    position:relative;
+    z-index:1;
+}
+.abbey-callout-left {
+    flex:1;
+}
+.abbey-callout-left h1,
+.abbey-callout-left h2 {
+    font-size:36px;
+    font-weight:900;
+    color:#fff !important;
+    margin-bottom:16px;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.2;
+}
+.abbey-callout-left p {
+    font-size:16px;
+    color:rgba(255,255,255,0.9);
+    line-height:1.7;
+    margin-bottom:24px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-callout-left p strong {
+    color:#fff;
+    font-size:18px;
+}
+.abbey-callout-btn {
+    display:inline-block;
+    background:#000;
+    color:#fff !important;
+    font-size:16px;
+    font-weight:900;
+    padding:14px 32px;
+    text-decoration:none;
+    border-radius:4px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    transition:background 0.2s;
+}
+.abbey-callout-btn:hover {
+    background:#222;
+}
+.abbey-callout-icon {
+    flex-shrink:0;
+}
+.abbey-callout-icon svg {
+    width:180px;
+    height:auto;
+    opacity:0.25;
+}
+@media(max-width:768px){
+    .abbey-callout-banner {
+        padding:40px 20px;
+    }
+    .abbey-callout-inner {
+        flex-direction:column;
+        text-align:center;
+    }
+    .abbey-callout-left h2 {
+        font-size:26px;
+    }
+    .abbey-callout-icon {
+        display:none;
+    }
+}
+
+.abbey-areas-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+.abbey-areas-inner {
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+.abbey-areas-left h2 {
+    font-size:32px;
+    font-weight:900;
+    color:#d71919;
+    margin-bottom:16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-areas-left p {
+    font-size:17px;
+    color:#666;
+    line-height:1.7;
+    margin-bottom:30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-areas-list-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0 20px;
+}
+.abbey-areas-list {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.abbey-areas-list li {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:19px;
+    font-weight:700;
+    color:#222;
+    padding:10px 0;
+    border-bottom:1px solid #f0f0f0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-areas-list li:last-child {
+    border-bottom:none;
+}
+.abbey-areas-list li::before {
+    content:'';
+    display:inline-block;
+    min-width:22px;
+    height:22px;
+    border-radius:50%;
+    background-color:#d71919;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 13l4 4L19 7' stroke='%23fff' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size:contain;
+    background-repeat:no-repeat;
+    flex-shrink:0;
+}
+.abbey-areas-right img {
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    border-radius:16px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.15);
+    display:block;
+}
+@media(max-width:900px){
+    .abbey-areas-inner {
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+    .abbey-areas-right img {
+        height:300px;
+    }
+    .abbey-areas-left h2 {
+        font-size:24px;
+    }
+    .abbey-areas-list-grid {
+        grid-template-columns:1fr;
+    }
+}
+
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+
+.abbey-contact-page-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+
+.abbey-contact-page-inner {
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.abbey-contact-page-heading {
+    font-size:32px;
+    font-weight:900;
+    color:#d71919;
+    margin-bottom:10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-reviews-wrapper h1,
+.abbey-portfolio-wrapper h1,
+.abbey-services-list-wrapper h1,
+.abbey-about-wrapper h1 {
+    font-size:32px !important;
+    font-weight:900;
+    color:#d71919 !important;
+    margin:0 0 10px;
+    line-height:1.2;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-contact-page-subheading {
+    font-size:18px;
+    color:#666;
+    margin-bottom:40px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-contact-top-row {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-bottom:24px;
+}
+
+.abbey-info-card {
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 16px rgba(0,0,0,0.07);
+    padding:28px 30px;
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.abbey-info-card-icon {
+    width:48px;
+    height:48px;
+    background:#d71919;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.abbey-info-card-icon svg {
+    width:24px;
+    height:24px;
+    fill:#fff;
+}
+
+.abbey-info-card-body h3 {
+    font-size:13px;
+    font-weight:900;
+    color:#999;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:6px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-info-card-body a {
+    font-size:22px;
+    font-weight:900;
+    color:#d71919;
+    text-decoration:none;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.3;
+}
+
+.abbey-info-card-body a:hover {
+    text-decoration:none;
+}
+
+.abbey-info-card-body a,
+.abbey-info-card-body a:hover,
+.abbey-info-card-body a:focus,
+.abbey-info-card-body a:visited {
+    color:#d71919 !important;
+    text-decoration:none !important;
+    border-bottom:none !important;
+    box-shadow:none !important;
+    outline:none !important;
+}
+
+.abbey-hours-card {
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 16px rgba(0,0,0,0.07);
+    overflow:hidden;
+}
+
+.abbey-hours-card-header {
+    background:#d71919;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.abbey-hours-card-header svg {
+    width:24px;
+    height:24px;
+    fill:#fff;
+    flex-shrink:0;
+}
+
+.abbey-hours-card-header h3 {
+    font-size:17px;
+    font-weight:900;
+    color:#fff !important;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-hours-table {
+    padding:10px 0;
+}
+
+.abbey-hours-row {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 24px;
+    border-bottom:1px solid #f0f0f0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-hours-row:last-child {
+    border-bottom:none;
+}
+
+.abbey-hours-day {
+    font-size:15px;
+    font-weight:700;
+    color:#333;
+}
+
+.abbey-hours-time {
+    font-size:15px;
+    font-weight:600;
+    color:#d71919;
+}
+
+.abbey-hours-row.closed .abbey-hours-day {
+    color:#aaa;
+}
+
+.abbey-hours-row.closed .abbey-hours-time {
+    color:#bbb;
+}
+
+@media(max-width:640px){
+    .abbey-contact-top-row {
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+    .abbey-contact-page-wrapper {
+        padding:40px 16px;
+    }
+    .abbey-info-card {
+        padding:20px;
+    }
+    .abbey-contact-page-heading {
+        font-size:26px;
+    }
+    .abbey-info-card-body a {
+        font-size:18px;
+    }
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.abbey-footer {
+    background:#d71919;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:20px 20px 0;
+    box-sizing:border-box;
+    width:100%;
+}
+
+.abbey-footer a {
+    text-decoration:none !important;
+    border-bottom:none !important;
+    box-shadow:none !important;
+    color:#fff !important;
+}
+
+.abbey-footer-inner {
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:50px;
+}
+
+.abbey-footer-col h4 {
+    font-size:15px;
+    font-weight:900;
+    color:#fff !important;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:20px;
+    padding-bottom:12px;
+    border-bottom:3px solid rgba(255,255,255,0.4);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-footer-contact-item {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:14px;
+}
+
+.abbey-footer-contact-item svg {
+    width:20px;
+    height:20px;
+    fill:#fff;
+    flex-shrink:0;
+}
+
+.abbey-footer-contact-item a,
+.abbey-footer-contact-item span {
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-footer-contact-item a:hover {
+    color:#fff;
+}
+
+.abbey-footer-hours-item {
+    align-items:flex-start;
+}
+
+.abbey-footer-hours {
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.abbey-footer-hours-title {
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:rgba(255,255,255,0.8);
+    margin-bottom:2px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-footer-hours span {
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-footer-links {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.abbey-footer-links li {
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.abbey-footer-links li:last-child {
+    border-bottom:none;
+}
+
+.abbey-footer-links li a {
+    display:block;
+    padding:9px 0;
+    font-size:15px;
+    font-weight:700;
+    font-family:Arial, Helvetica, sans-serif;
+    transition:opacity 0.2s, padding-left 0.2s;
+}
+
+.abbey-footer-links li a:hover {
+    padding-left:6px;
+    opacity:0.8;
+}
+
+.abbey-footer-bottom {
+    border-top:1px solid rgba(255,255,255,0.3);
+    padding:20px 0;
+    text-align:center;
+}
+
+.abbey-footer-bottom p {
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+@media(max-width:900px){
+    .abbey-footer-inner {
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+}
+
+@media(max-width:500px){
+    .abbey-footer-inner {
+        grid-template-columns:1fr;
+    }
+    .abbey-footer {
+        padding:40px 16px 0;
+    }
+}
+
+/* =====================================================
+   PORTFOLIO PAGE
+===================================================== */
+
+.abbey-portfolio-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+
+.abbey-portfolio-inner {
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.abbey-portfolio-intro {
+    font-size:17px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:50px;
+    max-width:900px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-portfolio-section {
+    margin-bottom:60px;
+}
+
+.abbey-portfolio-section-title {
+    font-size:13px;
+    font-weight:900;
+    color:#999;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:24px;
+    padding-bottom:12px;
+    border-bottom:2px solid #f0f0f0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-portfolio-grid {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+}
+
+.abbey-portfolio-card {
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-portfolio-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.14);
+}
+
+.abbey-portfolio-card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+.abbey-portfolio-card-body {
+    padding:20px;
+}
+
+.abbey-portfolio-card-body h2,
+.abbey-portfolio-card-body h3 {
+    font-size:17px;
+    font-weight:900;
+    color:#d71919 !important;
+    margin-bottom:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.3;
+}
+
+.abbey-portfolio-card-body p {
+    font-size:14px;
+    color:#555;
+    line-height:1.7;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-portfolio-card-body a.abbey-portfolio-read-more {
+    display:inline-block;
+    margin-top:14px;
+    font-size:13px;
+    font-weight:700;
+    color:#d71919 !important;
+    text-decoration:none !important;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    border-bottom:2px solid #d71919 !important;
+    box-shadow:none !important;
+}
+
+.abbey-portfolio-card-body a.abbey-portfolio-read-more:hover {
+    opacity:0.8;
+}
+
+@media(max-width:900px){
+    .abbey-portfolio-grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:500px){
+    .abbey-portfolio-grid {
+        grid-template-columns:1fr;
+    }
+
+    .abbey-portfolio-wrapper {
+        padding:40px 16px;
+    }
+}
+/* =====================================================
+   REVIEWS PAGE
+===================================================== */
+
+.abbey-reviews-wrapper {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f7f7;
+    padding:60px 20px;
+    box-sizing:border-box;
+}
+
+.abbey-reviews-inner {
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.abbey-reviews-summary {
+    background:#d71919;
+    border-radius:10px;
+    padding:30px 40px;
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-bottom:50px;
+}
+
+.abbey-reviews-summary-score {
+    font-size:64px;
+    font-weight:900;
+    color:#fff;
+    line-height:1;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-reviews-summary-right {
+    flex:1;
+}
+
+.abbey-reviews-summary-stars {
+    font-size:28px;
+    color:#fff;
+    letter-spacing:2px;
+    margin-bottom:6px;
+}
+
+.abbey-reviews-summary-right p {
+    color:rgba(255,255,255,0.9);
+    font-size:16px;
+    font-weight:700;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-reviews-grid {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+    margin-bottom:60px;
+}
+
+.abbey-review-card {
+    background:#fff;
+    border-radius:10px;
+    padding:24px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.07);
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.abbey-review-stars {
+    color:#d71919;
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+.abbey-review-title {
+    font-size:16px;
+    font-weight:900;
+    color:#222;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-review-text {
+    font-size:14px;
+    color:#555;
+    line-height:1.7;
+    flex:1;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-review-meta {
+    font-size:12px;
+    color:#999;
+    font-family:Arial, Helvetica, sans-serif;
+    border-top:1px solid #f0f0f0;
+    padding-top:10px;
+    margin-top:auto;
+}
+
+.abbey-review-meta strong {
+    color:#666;
+}
+
+.abbey-leave-review-wrapper {
+    background:#fff;
+    border-radius:12px;
+    padding:50px 40px;
+    box-shadow:0 2px 16px rgba(0,0,0,0.07);
+    max-width:700px;
+    margin:0 auto;
+}
+
+.abbey-leave-review-wrapper h2 {
+    font-size:28px;
+    font-weight:900;
+    color:#d71919 !important;
+    margin-bottom:8px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-leave-review-wrapper p.abbey-review-form-intro {
+    font-size:16px;
+    color:#666;
+    margin-bottom:30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-review-form-group {
+    margin-bottom:18px;
+}
+
+.abbey-review-form-group label {
+    display:block;
+    font-size:12px;
+    font-weight:900;
+    color:#555;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin-bottom:6px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.abbey-review-form-group input,
+.abbey-review-form-group textarea,
+.abbey-review-form-group select {
+    width:100%;
+    padding:12px 14px;
+    border:2px solid #e0e0e0;
+    border-radius:6px;
+    font-size:14px;
+    color:#111;
+    box-sizing:border-box;
+    outline:none;
+    font-family:Arial, Helvetica, sans-serif;
+    transition:border-color 0.2s;
+}
+
+.abbey-review-form-group input:focus,
+.abbey-review-form-group textarea:focus,
+.abbey-review-form-group select:focus {
+    border-color:#d71919;
+}
+
+.abbey-review-form-group textarea {
+    resize:vertical;
+    min-height:120px;
+}
+
+.abbey-review-submit {
+    width:100%;
+    background:#d71919;
+    color:#fff;
+    border:none;
+    padding:16px;
+    font-size:15px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:background 0.2s;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top:8px;
+}
+
+.abbey-review-submit:hover {
+    background:#b91414;
+}
+
+@media(max-width:900px){
+    .abbey-reviews-grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+    .abbey-reviews-grid {
+        grid-template-columns:1fr;
+    }
+    .abbey-reviews-summary {
+        flex-direction:column;
+        text-align:center;
+        padding:24px;
+        gap:16px;
+    }
+    .abbey-leave-review-wrapper {
+        padding:30px 20px;
+    }
+    .abbey-reviews-wrapper {
+        padding:40px 16px;
+    }
+}
+
+@media(max-width:768px){
+    .abbey-contact-page-wrapper h1,
+    .abbey-reviews-wrapper h1,
+    .abbey-portfolio-wrapper h1,
+    .abbey-services-list-wrapper h1,
+    .abbey-about-wrapper h1 {
+        font-size:24px !important;
+    }
+}
