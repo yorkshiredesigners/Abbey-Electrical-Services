@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .abbey-logo img{
-        max-width:220px;
+        max-width:270px;
     }
 
     .abbey-contact-inner{
@@ -370,6 +370,200 @@ h1, h2, h3, h4, h5, h6 {
         padding:13px 16px;
         font-size:14px;
     }
+}
+
+/* ── Mobile slide-in drawer ─────────────────────────────── */
+
+.abbey-drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.abbey-drawer-overlay.open {
+    display: block;
+    opacity: 1;
+}
+
+.abbey-mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 82%;
+    max-width: 340px;
+    height: 100%;
+    background: #d71919;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.abbey-mobile-drawer.open {
+    right: 0;
+}
+
+.abbey-drawer-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+    padding: 16px 22px 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.abbey-drawer-nav {
+    padding-top: 0;
+}
+
+.abbey-drawer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.abbey-drawer-nav ul li a {
+    display: block;
+    padding: 20px 28px;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(255,255,255,0.35);
+    transition: background 0.15s;
+}
+
+.abbey-drawer-nav ul li:first-child a {
+    border-top: 2px solid rgba(255,255,255,0.35);
+}
+
+.abbey-drawer-nav ul li a:hover {
+    background: rgba(0,0,0,0.12);
+}
+
+.abbey-drawer-contact {
+    padding: 22px 22px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.abbey-drawer-call {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    color: #d71919 !important;
+    text-decoration: none !important;
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.abbey-drawer-call svg {
+    width: 22px;
+    height: 22px;
+    fill: #d71919;
+    flex-shrink: 0;
+}
+
+.abbey-drawer-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.9) !important;
+    text-decoration: none !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.abbey-drawer-email svg {
+    width: 20px;
+    height: 20px;
+    fill: rgba(255,255,255,0.8);
+    flex-shrink: 0;
+}
+
+.abbey-drawer-hours {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.9) !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.abbey-drawer-hours svg {
+    width: 20px;
+    height: 20px;
+    fill: rgba(255,255,255,0.8);
+    flex-shrink: 0;
+}
+
+.abbey-drawer-areas {
+    padding: 18px 20px 20px;
+    border-top: 2px solid rgba(255,255,255,0.35);
+    border-bottom: 2px solid rgba(255,255,255,0.35);
+    background: rgba(0,0,0,0.15);
+}
+
+.abbey-drawer-areas-heading {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 12px;
+}
+
+.abbey-drawer-areas-heading svg {
+    width: 14px;
+    height: 14px;
+    fill: rgba(255,255,255,0.8);
+    flex-shrink: 0;
+}
+
+.abbey-drawer-area-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.abbey-drawer-area-tag {
+    display: inline-block;
+    background: #fff;
+    color: #d71919 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none !important;
+}
+
+.abbey-drawer-areas-note {
+    color: rgba(255,255,255,0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin: 0;
+    font-style: italic;
 }
 
 .abbey-hero-wrapper {
@@ -967,6 +1161,15 @@ h1, h2, h3, h4, h5, h6 {
     padding:10px 0;
     border-bottom:1px solid #f0f0f0;
     font-family:Arial, Helvetica, sans-serif;
+}
+.abbey-areas-list li a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+}
+.abbey-areas-list li a:hover,
+.abbey-areas-list li a:focus {
+    color: #d71919;
 }
 .abbey-areas-list li:last-child {
     border-bottom:none;

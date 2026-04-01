@@ -8,7 +8,11 @@
       "Bash(find . -maxdepth 1 -name \"*.html\" -exec perl -i -pe 's|href=\"style\\\\.css\"|href=\"/style.css\"|g' {} \\\\;)",
       "Bash(find . -maxdepth 1 -name \"*.html\" -exec perl -i -pe 's|src=\"images/|src=\"/images/|g' {} \\\\;)",
       "Bash(perl -i -pe ':*)",
-      "Bash(find . -mindepth 2 -maxdepth 2 -name index.html -exec perl -i -pe ':*)"
+      "Bash(find . -mindepth 2 -maxdepth 2 -name index.html -exec perl -i -pe ':*)",
+      "Bash(find . -maxdepth 1 -name \"*.html\" -exec sed -i '' 's|https://google-reviewcards.co.uk/contact-us/|contact-us/|g' {} +)",
+      "Bash(find . -mindepth 2 -name \"*.html\" -exec sed -i '' 's|https://google-reviewcards.co.uk/contact-us/|../contact-us/|g' {} +)",
+      "Bash(find . -maxdepth 1 -name \"*.html\" -exec sed -i '' 's|<link rel=\"stylesheet\" href=\"style.css\">|<link rel=\"stylesheet\" href=\"style.css\">\\\\n<script src=\"mobile-menu.js\" defer></script>|g' {} +)",
+      "Bash(find . -mindepth 2 -name \"*.html\" -exec sed -i '' 's|<link rel=\"stylesheet\" href=\"../style.css\">|<link rel=\"stylesheet\" href=\"../style.css\">\\\\n<script src=\"../mobile-menu.js\" defer></script>|g' {} +)"
     ]
   }
 }
