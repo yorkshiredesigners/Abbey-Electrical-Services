@@ -6,7 +6,9 @@
       "Bash(find . -maxdepth 1 -name \"*.html\" -exec perl -i -pe 's|href=\"index\\\\.html\"|href=\"/\"|g' {} \\\\;)",
       "Bash(find . -maxdepth 1 -name \"*.html\" -exec perl -i -pe 's|href=\"\\([a-z0-9][a-z0-9\\\\-]+\\)\\\\.html\"|href=\"/$1/\"|g' {} \\\\;)",
       "Bash(find . -maxdepth 1 -name \"*.html\" -exec perl -i -pe 's|href=\"style\\\\.css\"|href=\"/style.css\"|g' {} \\\\;)",
-      "Bash(find . -maxdepth 1 -name \"*.html\" -exec perl -i -pe 's|src=\"images/|src=\"/images/|g' {} \\\\;)"
+      "Bash(find . -maxdepth 1 -name \"*.html\" -exec perl -i -pe 's|src=\"images/|src=\"/images/|g' {} \\\\;)",
+      "Bash(perl -i -pe ':*)",
+      "Bash(find . -mindepth 2 -maxdepth 2 -name index.html -exec perl -i -pe ':*)"
     ]
   }
 }
