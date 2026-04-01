@@ -20,6 +20,10 @@
         nav.className = 'abbey-drawer-nav';
         var ul = document.createElement('ul');
         document.querySelectorAll('.abbey-nav-menu a').forEach(function (a) {
+            var label = a.textContent.trim();
+            if (label === 'Portfolio' || label === 'Reviews') {
+                return;
+            }
             var li = document.createElement('li');
             var newA = document.createElement('a');
             newA.href = a.href;
