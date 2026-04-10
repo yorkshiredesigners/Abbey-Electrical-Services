@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAT Testing – Abbey Electrical Services Hull</title>
         <meta name="description" content="Learn about PAT Testing – Abbey Electrical Services Hull from Abbey Electrical Services Hull, serving Hull and East Yorkshire with professional electrical installation, maintenance, testing and repairs.">
+    <link rel="canonical" href="https://abbeyelectricalservices.co.uk/pat-testing/">
 <link rel="stylesheet" href="../style.css">
 <script src="../mobile-menu.js" defer></script>
     <style>
@@ -241,18 +242,33 @@
         <div class="abbey-service-form-box">
             <h2>Request a Callback!</h2>
             <hr>
-            <form>
-                <label>Your Name (required)</label>
-                <input type="text" name="name" required>
+            <form action="https://formspree.io/f/xzdkljgp" method="POST">
+                <input type="hidden" name="_subject" value="PAT Testing enquiry - Abbey Electrical Services">
+                <input type="hidden" name="service_required" value="PAT Testing">
 
-                <label>Your telephone number (required)</label>
-                <input type="tel" name="phone" required>
+                <label>Company name (required)</label>
+                <input type="text" name="company_name" autocomplete="organization" required>
 
-                <label>What is it regarding?</label>
-                <input type="text" name="subject">
+                <label>Phone number (required)</label>
+                <input type="tel" name="phone" autocomplete="tel" required>
 
-                <label>What time should we call you?</label>
-                <input type="text" name="calltime">
+                <label>Email address (required)</label>
+                <input type="email" name="email" autocomplete="email" required>
+
+                <label>Site address of items to be tested (required)</label>
+                <textarea name="site_address" rows="4" required></textarea>
+
+                <label>How many items estimated need to be tested? (required)</label>
+                <input type="number" name="estimated_items" min="1" required>
+
+                <label>Last tested date if known</label>
+                <input type="text" name="last_tested_date" placeholder="e.g. March 2025 or not known">
+
+                <label>Time frame for when you want the work completed (required)</label>
+                <input type="text" name="completion_timeframe" placeholder="e.g. This week, within 2 weeks, before month end" required>
+
+                <label>Message</label>
+                <textarea name="message" rows="5"></textarea>
 
                 <button type="submit" class="abbey-service-form-btn">Send</button>
             </form>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electrician in Driffield | Abbey Electrical Services</title>
     <meta name="description" content="Looking for a reliable electrician in Driffield? Abbey Electrical Services provide domestic, commercial and industrial electrical services across Driffield and East Yorkshire. Call 01482 440210.">
+    <link rel="canonical" href="https://abbeyelectricalservices.co.uk/electrician-driffield/">
 <link rel="stylesheet" href="../style.css">
 <script src="../mobile-menu.js" defer></script>
 </head>
@@ -84,7 +85,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/fuse board and earthing.jpg" alt="Fuse Boards Driffield">
-                <div class="abbey-service-label">Fuse Boards &amp; Earthing</div>
+                <a href="../fusebox-consumer-units/"><div class="abbey-service-label">Fuse Boards &amp; Earthing</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>Upgrading your old fuse board to a new Consumer Unit offers better protection from electrical faults.</p>
@@ -94,7 +95,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/kitchen and bathroom.jpg" alt="Kitchen & Bathroom Driffield">
-                <div class="abbey-service-label">Kitchen &amp; Bathroom</div>
+                <a href="../kitchen-bathroom-refurbishment/"><div class="abbey-service-label">Kitchen &amp; Bathroom</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>Our NICEIC Electricians ensure kitchen appliances are installed safely and have sufficient power.</p>
@@ -104,7 +105,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/electrical testing.jpg" alt="Electrical Testing Driffield">
-                <div class="abbey-service-label">Electrical Testing</div>
+                <a href="../electrical-testing/"><div class="abbey-service-label">Electrical Testing</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>Electrical testing of your property and equipment ensures they are safe and meet current regulations.</p>
@@ -114,7 +115,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/power and lighting service.jpg" alt="Power & Lighting Driffield">
-                <div class="abbey-service-label">Power &amp; Lighting</div>
+                <a href="../power-lighting/"><div class="abbey-service-label">Power &amp; Lighting</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>All power and lighting installation, repairs and additions are carried out large or small.</p>
@@ -124,7 +125,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/pat testing service.jpg" alt="PAT Testing Driffield">
-                <div class="abbey-service-label">PAT Testing</div>
+                <a href="../pat-testing/"><div class="abbey-service-label">PAT Testing</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>We provide quick, cost effective portable appliance testing and provide all relevant certification.</p>
@@ -134,7 +135,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/fire alarm.jpg" alt="Fire Alarms Driffield">
-                <div class="abbey-service-label">Fire Alarms</div>
+                <a href="../fire-alarms/"><div class="abbey-service-label">Fire Alarms</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>For all your Fire Alarm needs, servicing or new design and installation we have it covered.</p>
@@ -144,7 +145,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/cctv.jpg" alt="CCTV Systems Driffield">
-                <div class="abbey-service-label">CCTV Systems</div>
+                <a href="../cctv-installation/"><div class="abbey-service-label">CCTV Systems</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>Providing peace of mind with CCTV systems designed to meet your precise needs.</p>
@@ -154,7 +155,7 @@
         <div class="abbey-service-card">
             <div class="abbey-service-img-wrap">
                 <img src="../images/emergency lighting service.jpg" alt="Emergency Lighting Driffield">
-                <div class="abbey-service-label">Emergency Lighting</div>
+                <a href="../emergency-lighting/"><div class="abbey-service-label">Emergency Lighting</div></a>
             </div>
             <div class="abbey-service-body">
                 <p>Emergency Lighting installation, maintenance, servicing and repair are all services we provide.</p>
@@ -188,32 +189,85 @@
             </div>
         </div>
 
-        <div class="abbey-callback-form">
+        <form class="abbey-callback-form" action="https://formspree.io/f/xzdkljgp" method="POST">
+            <input type="hidden" name="_subject" value="Website callback request - Abbey Electrical Services">
             <h3>Request a Callback!</h3>
             <p class="abbey-form-sub">Fill in your details and we'll call you back</p>
 
             <div class="abbey-form-group">
-                <label>Your Name *</label>
-                <input type="text" placeholder="John Smith">
+                <label>First name *</label>
+                <input type="text" name="first_name" autocomplete="given-name" required>
             </div>
 
             <div class="abbey-form-group">
-                <label>Telephone Number *</label>
-                <input type="tel" placeholder="01482 000000">
+                <label>Second name *</label>
+                <input type="text" name="second_name" autocomplete="family-name" required>
             </div>
 
             <div class="abbey-form-group">
-                <label>What is it regarding?</label>
-                <input type="text" placeholder="e.g. Fuse board replacement">
+                <label>Phone number *</label>
+                <input type="tel" name="phone" autocomplete="tel" required>
             </div>
 
             <div class="abbey-form-group">
-                <label>Best time to call?</label>
-                <input type="text" placeholder="e.g. Morning, after 3pm">
+                <label>Email address *</label>
+                <input type="email" name="email" autocomplete="email" required>
             </div>
 
-            <button class="abbey-form-submit">Send Request</button>
-        </div>
+            <div class="abbey-form-group">
+                <label>Service required *</label>
+                <select name="service_required" required>
+                    <option value="">Please select a service</option>
+                    <option value="Domestic Lighting">Domestic Lighting</option>
+                    <option value="Domestic Sockets">Domestic Sockets</option>
+                    <option value="Fusebox &amp; Consumer Units">Fusebox &amp; Consumer Units</option>
+                    <option value="Repairs &amp; Fault Finding">Repairs &amp; Fault Finding</option>
+                    <option value="Property Rewires">Property Rewires</option>
+                    <option value="Kitchen &amp; Bathroom Refurbishment">Kitchen &amp; Bathroom Refurbishment</option>
+                    <option value="Emergency Callouts">Emergency Callouts</option>
+                    <option value="Extensions &amp; Loft Conversions">Extensions &amp; Loft Conversions</option>
+                    <option value="Additional Sockets and Lights">Additional Sockets and Lights</option>
+                    <option value="Smoke Detectors">Smoke Detectors</option>
+                    <option value="Security Lighting">Security Lighting</option>
+                    <option value="LED Lighting">LED Lighting</option>
+                    <option value="Cooker and Shower Supplies">Cooker and Shower Supplies</option>
+                    <option value="Outside Power and Lighting">Outside Power and Lighting</option>
+                    <option value="CCTV Installation">CCTV Installation</option>
+                    <option value="Design and Build Projects">Design and Build Projects</option>
+                    <option value="Commercial Lighting">Commercial Lighting</option>
+                    <option value="Commercial Sockets">Commercial Sockets</option>
+                    <option value="Electrical Maintenance">Electrical Maintenance</option>
+                    <option value="Fire Alarms">Fire Alarms</option>
+                    <option value="Breakdowns">Breakdowns</option>
+                    <option value="Shop Fitting">Shop Fitting</option>
+                    <option value="Emergency Lighting">Emergency Lighting</option>
+                    <option value="Power Distribution">Power Distribution</option>
+                    <option value="All 3 Phase Work">All 3 Phase Work</option>
+                    <option value="Electrical Surveys">Electrical Surveys</option>
+                    <option value="Facilities Management">Facilities Management</option>
+                    <option value="Contract Works">Contract Works</option>
+                    <option value="Cat 5 Data Network Cable">Cat 5 Data Network Cable</option>
+                    <option value="Factory Shutdowns">Factory Shutdowns</option>
+                    <option value="Machine Supplies &amp; Installations">Machine Supplies &amp; Installations</option>
+                    <option value="Electrical Condition Report">Electrical Condition Report</option>
+                    <option value="Home Buyers &amp; Sellers Report">Home Buyers &amp; Sellers Report</option>
+                    <option value="Fixed Wiring Testing">Fixed Wiring Testing</option>
+                    <option value="PAT Testing">PAT Testing</option>
+                    <option value="Emergency Lighting Testing">Emergency Lighting Testing</option>
+                    <option value="Fire Alarm Testing">Fire Alarm Testing</option>
+                    <option value="Periodic Inspection &amp; Testing">Periodic Inspection &amp; Testing</option>
+                    <option value="Electrical Safety Audits">Electrical Safety Audits</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="abbey-form-group">
+                <label>Message</label>
+                <textarea name="message" rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="abbey-form-submit">Send Request</button>
+        </form>
     </div>
 </div>
 
@@ -239,7 +293,7 @@
                     <li><a href="../security-lighting/">Security Lighting</a></li>
                     <li><a href="../led-lighting/">LED Lighting</a></li>
                     <li><a href="../cooker-shower-supplies/">Cooker and Shower Supplies</a></li>
-                    <li><a href="../outside-power-lighting/">Outside Power and Lighting</a></li>
+                    <li><a href="../power-lighting/">Power &amp; Lighting</a></li>
                     <li><a href="../cctv-installation/">CCTV Installation</a></li>
                     <li><a href="../design-build-projects/">Design and Build Projects</a></li>
                     <li>Air Source Heat Pumps</li>
