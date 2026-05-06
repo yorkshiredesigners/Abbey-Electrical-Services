@@ -114,3 +114,36 @@
         });
     });
 })();
+
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.abbey-service-choice-group').forEach(function (group) {
+            var form = group.closest('form');
+            var checkboxes = Array.prototype.slice.call(group.querySelectorAll('input[type="checkbox"]'));
+            if (!form || !checkboxes.length) return;
+
+            function hasSelection() {
+                return checkboxes.some(function (checkbox) {
+                    return checkbox.checked;
+                });
+            }
+
+            function clearError() {
+                group.classList.remove('abbey-service-choice-group-error');
+            }
+
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', clearError);
+            });
+
+            form.addEventListener('submit', function (event) {
+                if (hasSelection()) return;
+
+                event.preventDefault();
+                group.classList.add('abbey-service-choice-group-error');
+                group.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                checkboxes[0].focus({ preventScroll: true });
+            });
+        });
+    });
+})();
